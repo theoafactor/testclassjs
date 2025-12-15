@@ -1,17 +1,24 @@
-//1. literal method
-const users = ["James", "Jade", "Mike", "Tayo"];
+// const user = {
+//     "username" : "James", 
+//     "age" : 12, 
+//     "id" : 123, 
+//     "location": "Lagos", 
+//     "theme-colour": "black"
+// }
 
-let username = prompt("Enter username: ")
+// // convert object into a string
+// // JSON.stringify()
 
-if(username.trim().length == 0){
-    alert("Please enter your name");
-}else{
+// let string_user = JSON.stringify(user);
 
-    if(users.includes(username)){
-        alert(`Welcome ${username}`)
-    }else{
-        alert("You are not registered in the array");
-    }
+// localStorage.setItem("user", string_user)
 
-}
+let stored_user = localStorage.getItem("user");
 
+console.log(stored_user);
+
+//JSON.parse()
+
+let original_user = JSON.parse(stored_user);
+
+console.log(original_user)
